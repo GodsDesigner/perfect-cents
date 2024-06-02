@@ -1,0 +1,96 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container Styles */
+.max-w-4xl {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+form input,
+form select {
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+}
+
+button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* Table Styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+td {
+    border-bottom: 1px solid #e2e2e2;
+}
+
+tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Heading Styles */
+h1,
+h2 {
+    color: #333;
+}
+
+/* Utility Classes */
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.mb-2,
+.mb-4,
+.mb-6 {
+    margin-bottom: 0.5rem;
+}
+
+.mt-2,
+.mt-4 {
+    margin-top: 0.5rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Calendar Styles */
+#calendar {
+    margin-top: 2rem;
+}
