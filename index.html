@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Expense Tracker</title>
+    <title>Perfect Cents</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.4/dist/tailwind.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles can be added here */
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 p-6">
-    <div class="max-w-4xl mx-auto bg-white p-6 rounded shadow-md">
-        <h1 class="text-4xl font-bold mb-6 text-center text-blue-600">Expense Tracker</h1>
+    <div class="container bg-white p-6 rounded shadow-md">
+        <h1 class="text-4xl font-bold mb-6 text-center text-blue-600">Perfect Cents</h1>
 
         <!-- Budget Display and Set Budget -->
         <div class="mb-6">
-            <form id="budget-form" class="flex items-center justify-between">
-                <div>
+            <form id="budget-form" class="flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-2 md:mb-0">
                     <label class="text-xl font-bold">Daily Budget: $<span id="daily-budget-display">0.00</span></label>
                 </div>
-                <div class="flex items-center">
+                <div class="flex items-center w-full md:w-auto">
                     <input type="number" id="daily-budget-input" class="w-full p-2 border rounded mr-2" placeholder="Set Daily Budget" required>
                     <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Set</button>
                     <button type="button" id="clear-daily-budget" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 ml-2">Clear</button>
@@ -30,7 +37,7 @@
 
         <!-- Navigation Tabs -->
         <div class="mb-6">
-            <ul class="flex border-b">
+            <ul class="flex flex-col md:flex-row border-b">
                 <li class="mr-1">
                     <a class="bg-white inline-block py-2 px-4 text-blue-500 font-semibold" href="#input-expense-tab" id="input-expense-tab-btn">Input Expenses</a>
                 </li>
@@ -141,6 +148,7 @@
             <!-- Calendar for Bills -->
             <div id="calendar"></div>
         </div>
+
         <!-- Savings Goals Tab -->
         <div id="savings-goals-tab" class="tab-content hidden">
             <form id="savings-goal-form" class="mb-4">
@@ -168,6 +176,7 @@
                         <th class="py-2 border">Amount</th>
                         <th class="py-2 border">Target Date</th>
                         <th class="py-2 border">Progress</th>
+                        <th class="py-2 border">Actions</th>
                     </tr>
                 </thead>
                 <tbody id="savings-goals-list">
